@@ -47,7 +47,7 @@ export default function Topnav() {
                     <Button
                         text='Upload'
                         type='button'
-                        className={`bg-aqua text-black`}
+                        buttonStyle='navButton'
                     >
                         <Link to='/upload'>Upload</Link>
                     </Button>
