@@ -10,9 +10,9 @@ const Button = ({ buttonStyle, type, text, onClick }) => {
   const squareButton =
     "bg-purple-900 hover:bg-purple-600 text-white font-semi-bold mt-6 py-2 px-4 rounded-md w-full h-[3.5rem]";
   const navButton =
-      "bg-gradient-to-tl from-emerald-700 to-emerald-400 hover:bg-gradient-to-br from-pink-700 to-pink-400" +
+      "bg-gradient-to-tl from-emerald-800 to-emerald-400 hover:bg-gradient-to-br from-emerald-800 to-emerald-400" +
       " text-white border-2 border-emerald-400 hover:border-2 hover:border-emerald-600 font-semi-bold px-4" +
-      " rounded-md h-[3.5rem]"
+      " rounded-lg h-[3.5rem]"
 
   //   const handleClick = () => console.log("Clicked!");
 
