@@ -15,6 +15,7 @@ import Sent from './pages/Messaging/Sent';
 import Friendz from './pages/Friendz/friendz';
 import MyOrchids from './pages/MyOrchids/MyOrchids';
 import Forums from './pages/Forums/forums';
+import Upload from './pages/upload';
 
 import "./App.css";
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route element={<Home />} path='/' exact />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/resources' element={<Resources />} />
+        <Route path='/upload' element={<Upload />} />
 
           {/* Login and Registration Routes */}
         <Route path='/login' element={<Login />} />

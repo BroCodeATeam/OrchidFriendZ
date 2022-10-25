@@ -4,6 +4,7 @@ import useSound from 'use-sound'
 
 import selectionSound from '../../assets/sounds/selection.wav'
 import { navLinks } from './navItems'
+import Upload from '../../pages/upload'
 
 import Button from '../Button/button'
 
@@ -44,13 +45,15 @@ export default function Topnav() {
 
                     </div>
 
-                    <Button
-                        text='Upload'
-                        type='button'
-                        buttonStyle='navButton'
-                    >
-                        <Link to='/upload'>Upload</Link>
-                    </Button>
+                    <Link to='/upload'>
+                        <Button
+                            text='Upload'
+                            type='button'
+                            buttonStyle='navButton'
+                        >
+                            Upload
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
