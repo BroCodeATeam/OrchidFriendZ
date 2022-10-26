@@ -36,7 +36,7 @@ export const links = [
         text: 'Messaging',
         icon: faInbox,
         iconClosed: <FontAwesomeIcon icon={faLeaf} className={`w-5 h-5 text-white`} />,
-        iconOpened: <FontAwesomeIcon icon={faSeedling} className={`w-5 h-5 text-white`} />,
+        iconOpened: <FontAwesomeIcon icon={faSeedling} className={`w-5 h-5 text-white`} onClick={toggleSidebar} />,
         subNav: [
             {
                 id: 1,

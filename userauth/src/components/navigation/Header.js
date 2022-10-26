@@ -31,13 +31,13 @@ const Header = () => {
                         <img
                             src={Logo}
                             alt=''
-                            className={`w-[12rem] h-auto mx-8 duration-500`}
+                            className={`w-[12rem] h-auto mx-10 transition-all ease-in-out duration-500`}
                         />
                     ) :
                     <img
                         src={LogoText}
                         alt=''
-                        className={`w-fit h-auto p-1 duration-500`}
+                        className={`w-fit h-auto p-1 transition-all ease-in-out duration-500`}
                     />}
 
                 <div className="relative m-2">

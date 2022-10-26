@@ -20,10 +20,10 @@ const SubSidenav = ({ item, showSidebar, toggleSidebar }) => {
                 </div>
                 <div className={`w-5 h-5 mr-6 flex justify-center items-center duration-200 ${!showSubnav && "hidden"}`} onClick={toggleSidebar}>
                     {item.subNav && subnav
-                        ?item.iconOpened
-                        : item.subNav
-                            ? item.iconClosed
-                            : null}
+                    ? item.iconOpened
+                    : item.subNav
+                    ? item.iconClosed
+                    : null}
                 </div>
             </Link>
             {subnav && item.subNav.map((item, index) => {
