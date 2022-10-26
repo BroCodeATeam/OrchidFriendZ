@@ -12,7 +12,7 @@ const Button = ({ buttonStyle, type, text, onClick }) => {
   const navButton =
       "bg-gradient-to-tl from-emerald-800 to-emerald-400 hover:bg-gradient-to-br from-emerald-800 to-emerald-400" +
       " text-white border-2 border-emerald-400 hover:border-2 hover:border-emerald-600 font-semi-bold px-4" +
-      " rounded-lg h-[3.5rem]"
+      " rounded-lg h-[3.5rem] text-xl"
 
   //   const handleClick = () => console.log("Clicked!");
 

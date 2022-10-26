@@ -13,7 +13,7 @@ const SubSidenav = ({ item, showSidebar, toggleSidebar }) => {
 
     return (
         <div>
-            <Link to={item.path} onClick={item.subNav && showSubnav} className={`flex justify-between items-center text-white text-xl p-4 list-none h-[50px] no-underline hover:bg-gradient-to-l from-primaryPurple to-transparent hover:cursor-pointer mt-6 w-[300px]`}>
+            <Link to={item.path} onClick={item.subNav && showSubnav} className={`flex justify-between items-center text-white text-xl p-4 list-none h-[50px] no-underline hover:bg-gradient-to-l from-primaryPurple to-transparent hover:cursor-pointer mt-6 w-80`}>
                 <div className={`flex items-center`}>
                     <FontAwesomeIcon icon={item.icon} className={`w-10 h-10 mr-8 text-white`} />
                     <h1 className={`text-white origin-left text-2xl text-center mr-4 duration-200 ${showSidebar && "hidden"}`} onClick={toggleSidebar}>{item.label}</h1>
