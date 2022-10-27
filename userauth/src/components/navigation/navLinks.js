@@ -30,88 +30,76 @@ export const links = [
   },
   {
     id: 2,
-    path: "/messaging",
-    text: "Messaging",
+    path: '/messaging',
+    text: 'Messaging',
     icon: faInbox,
-    iconClosed: (
-      <FontAwesomeIcon icon={faLeaf} className={`w-5 h-5 text-white`} />
-    ),
-    iconOpened: (
-      <FontAwesomeIcon
-        icon={faSeedling}
-        className={`w-5 h-5 text-white`}
-        onClick={toggleSidebar}
-      />
-    ),
+    iconClosed: <FontAwesomeIcon icon={faLeaf} className={`w-5 h-5 text-white`} />,
+    iconOpened: <FontAwesomeIcon icon={faSeedling} className={`w-5 h-5 text-white`} />,
     subNav: [
-      {
-        id: 1,
-        path: "/messaging/inbox",
-        text: "Inbox",
-        icon: faEnvelope,
-        cName: "sub-nav",
-      },
-      {
-        id: 2,
-        path: "/messaging/trash",
-        text: "Trash",
-        icon: faTrash,
-        cName: "sub-nav",
-      },
-    ],
-  },
-  {
-    id: 3,
-    path: "/contacts",
-    text: "Contacts",
-    icon: faAddressBook,
-    iconClosed: (
-      <FontAwesomeIcon icon={faLeaf} className={`w-5 h-5 text-white`} />
-    ),
-    iconOpened: (
-      <FontAwesomeIcon icon={faSeedling} className={`w-5 h-5 text-white`} />
-    ),
-    subNav: [
-      {
-        id: 1,
-        path: "/contacts/all",
-        text: "All Contacts",
-        icon: faAddressCard,
-        cName: "sub-nav",
-      },
-      {
-        id: 2,
-        path: "/contacts/favorites",
-        text: "Favorites",
-        icon: faStar,
-        cName: "sub-nav",
-      },
-    ],
-  },
-  {
-    id: 4,
-    path: "/calendar",
-    text: "Calendar",
-    icon: faCalendarDays,
-  },
-  {
-    id: 5,
-    path: "/meetings",
-    text: "Meetings",
-    icon: faPersonChalkboard,
-  },
-  {
-    id: 6,
-    path: "/resources",
-    text: "Resources",
-    icon: faClipboardList,
-  },
-  {
-    id: 7,
-    path: "/reports",
-    text: "Reports",
-    icon: faChartLine,
-  },
+        {
+            id: 1,
+            path: '/messaging/inbox',
+            text: 'Inbox',
+            icon: faEnvelope,
+            cName: "sub-nav",
+        },
+        {
+            id: 2,
+            path: '/messaging/trash',
+            text: 'Trash',
+            icon: faTrash,
+            cName: "sub-nav"
+        }
+      ]
+    },
+    {
+        id: 3,
+        path: '/contacts',
+        text: 'Contacts',
+        icon: faAddressBook,
+        iconClosed: <FontAwesomeIcon icon={faLeaf} className={`w-5 h-5 text-white`} />,
+        iconOpened: <FontAwesomeIcon icon={faSeedling} className={`w-5 h-5 text-white`} />,
+        subNav: [
+            {
+                id: 1,
+                path: '/contacts/all',
+                text: 'All Contacts',
+                icon: faAddressCard,
+                cName: "sub-nav"
+            },
+            {
+                id: 2,
+                path: '/contacts/favorites',
+                text: 'Favorites',
+                icon: faStar,
+                cName: "sub-nav"
+            }
+        ]
+    },
+    {
+        id: 4,
+        path: '/calendar',
+        text: 'Calendar',
+        icon: faCalendarDays
+    },
+    {
+        id: 5,
+        path: '/meetings',
+        text: 'Meetings',
+        icon: faPersonChalkboard
+    },
+    {
+        id: 6,
+        path: '/resources',
+        text: 'Resources',
+        icon: faClipboardList
+    },
+    {
+        id: 7,
+        path: '/reports',
+        text: 'Reports',
+        icon: faChartLine
+    },
 ];
 
 export const social = [

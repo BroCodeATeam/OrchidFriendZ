@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className={`bg-accent3 bg-contain bg-repeat-round bg-left w-screen h-screen text-white`} >
       <div className={`bg-white/70 w-full h-screen flex items-center flex-col`} >
-        <div className={`flex justify-center items-center mt-10 bg-gradient-to-tl from-teal/50 to-teal/10 rounded-t-full w-[750px] h-auto`} >
+        <div className={`flex justify-center items-center mt-40 bg-gradient-to-tl from-teal/50 to-teal/10 rounded-t-full w-[750px] h-auto`} >
           <img
             src={LogoText}
             alt=''
-            className={`mt-10`}
+            className={`mt-10 w-60 h-auto`}
           />
         </div>
         <div className={`flex justify-center content-center flex-col px-10 bg-gradient-to-bl from-teal/50 to-teal/10 rounded-b-full w-[750px] h-auto`} >
