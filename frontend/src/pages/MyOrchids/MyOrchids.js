@@ -1,6 +1,13 @@
 import React from "react";
-import { IconButton } from "@material-tailwind/react";
-import { Button } from "@material-tailwind/react";
+
+import {
+  Select,
+  Option,
+  Textarea,
+  Input,
+  Button,
+  IconButton,
+} from "@material-tailwind/react";
 
 function MyOrchids() {
   return (
@@ -28,6 +35,21 @@ function MyOrchids() {
       <div className='flex w-max gap-4 mt-4'>
         <Button ripple={true}>Ripple Effect On</Button>
         <Button ripple={false}>Ripple Effect Off</Button>
+      </div>
+      <div className='w-72 mt-8'>
+        <Input label='Fuck you' />
+      </div>
+      <div className='w-72 mt-8'>
+        <Select label='Select Version'>
+          <Option>Material Tailwind HTML</Option>
+          <Option>Material Tailwind React</Option>
+          <Option>Material Tailwind Vue</Option>
+          <Option>Material Tailwind Angular</Option>
+          <Option>Material Tailwind Svelte</Option>
+        </Select>
+      </div>
+      <div className='w-96 mt-8'>
+        <Textarea label='Message' />
       </div>
     </>
   );
