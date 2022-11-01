@@ -1,5 +1,7 @@
-module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -66,14 +68,13 @@ module.exports = {
         cattOverlay: "rgba(255, 255, 253, 0.5)",
       },
       backgroundImage: {
-        "cTenebrosa": "url('./assets/Cattleyatenebrosa.jpg')",
+        cTenebrosa: "url('./assets/Cattleyatenebrosa.jpg')",
         "3DCattleya": "url('./assets/3DOrchid.png')",
-        "backgroundFrame": "url('./assets/backgroundFrame2.png')",
-        "accent1": "url('./assets/accent1.png')",
-        "accent2": "url('./assets/accent2.png')",
-        "accent3": "url('./assets/accent3.png')",
-        "accent4": "url('./assets/accent4.png')"
-
+        backgroundFrame: "url('./assets/backgroundFrame2.png')",
+        accent1: "url('./assets/accent1.png')",
+        accent2: "url('./assets/accent2.png')",
+        accent3: "url('./assets/accent3.png')",
+        accent4: "url('./assets/accent4.png')",
       },
       keyframes: {
         "slide-in": {
@@ -117,4 +118,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+});
