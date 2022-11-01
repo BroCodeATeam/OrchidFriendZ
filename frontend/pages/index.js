@@ -1,21 +1,22 @@
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 
+import Account from '../components/Account'
+
 const Home = () => {
   const session = useSession()
   const supabase = useSupabaseClient()
 
   return (
-      <div className="container" style={{ padding: '50px 0 100px 0' }}>
+      <div className={`w-[25%] mx-auto`} style={{ padding: '50px 0 100px 0' }}>
         {!session ? (
             <Auth
-                providers={['google','facebook']}
                 supabaseClient={supabase}
                 appearance={{ theme: ThemeSupa }}
                 theme="dark"
             />
         ) : (
-            <p>Account page will go here.</p>
+            <Account session={session} />
         )}
       </div>
   )
