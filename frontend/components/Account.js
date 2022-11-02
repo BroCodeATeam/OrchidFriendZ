@@ -99,7 +99,7 @@ export default function Account({ session }) {
                 />
             </div>
 
-            <div>
+            <div className={`my-[10px]`}>
                 <button
                     className="button primary block"
                     onClick={() => updateProfile({ username, website, avatar_url })}
