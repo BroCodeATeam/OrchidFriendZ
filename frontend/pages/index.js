@@ -3,6 +3,7 @@ import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import Topnav from "../components/navigation/Topnav";
+import Account from '../components/Account'
 
 const Home = () => {
   const session = useSession()
