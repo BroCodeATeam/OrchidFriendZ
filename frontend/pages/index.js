@@ -10,7 +10,7 @@ const Home = () => {
   const supabase = useSupabaseClient()
 
   return (
-      <div className={`w-[25%] mx-auto`} style={{ padding: '50px 0 100px 0' }}>
+      <div style={{ padding: '50px 0 100px 0' }}>
         {!session ? (
             <Auth
                 supabaseClient={supabase}
