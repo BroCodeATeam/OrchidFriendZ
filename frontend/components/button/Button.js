@@ -21,16 +21,16 @@ const Button = ({ buttonStyle, type, text, onClick }) => {
             <button
                 className={
                     buttonStyle === "rounded"
-                        ? roundedButton
-                        : buttonStyle === "outline"
-                            ? outlineButton
-                            : buttonStyle === "disabled"
-                                ? disabledButton
-                                : buttonStyle === "square"
-                                    ? squareButton
-                                    : buttonStyle === 'navButton'
-                                        ? navButton
-                                        : null
+                    ? roundedButton
+                    : buttonStyle === "outline"
+                    ? outlineButton
+                    : buttonStyle === "disabled"
+                    ? disabledButton
+                    : buttonStyle === "square"
+                    ? squareButton
+                    : buttonStyle === 'navButton'
+                    ? navButton
+                    : null
                 }
                 // onClick={handleClick}
                 type={type}

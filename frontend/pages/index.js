@@ -3,6 +3,7 @@ import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import Topnav from "../components/navigation/Topnav";
+import HomePage from './Home'
 import Account from '../components/Account'
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
                 </Head>
 
                 <Topnav />
+                <HomePage />
             </div>
         )}
       </div>

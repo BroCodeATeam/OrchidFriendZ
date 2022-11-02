@@ -5,7 +5,7 @@
 html,
 body {
   --custom-font-family: 'Zen Antique', serif;
-  --custom-bg-color: #101010;
+  --custom-bg-color: rgba(0, 128, 128, 0.8);
   --custom-panel-color: #222;
   --custom-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
   --custom-color: #fff;
