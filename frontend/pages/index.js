@@ -11,9 +11,15 @@ const Home = () => {
   const supabase = useSupabaseClient()
 
   return (
-      <div style={{ padding: '50px 0 100px 0' }}>
+      <div className='w-[20rem]' style={{ padding: '50px 0 100px 0' }}>
         {!session ? (
             <Auth
+                providers={
+                [
+                    'google',
+                    'facebook'
+                ]
+                }
                 supabaseClient={supabase}
                 appearance={{ theme: ThemeSupa }}
                 theme="dark"

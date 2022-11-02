@@ -66,7 +66,7 @@ export default function Account({ session }) {
     }
 
     return (
-        <div className="form-widget">
+        <div className="form-widget w-[10rem]">
             <Avatar
                 uid={user.id}
                 url={avatar_url}
@@ -76,12 +76,12 @@ export default function Account({ session }) {
                     updateProfile({ username, website, avatar_url: url })
                 }}
             />
-            <div>
-                <label htmlFor="email">Email</label>
+            <div className='w-[10rem]'>
+                <label htmlFor="email" className='text-white'>Email</label>
                 <input id="email" type="text" value={session.user.email} disabled />
             </div>
-            <div>
-                <label htmlFor="username">Username</label>
+            <div className='w-[10rem]'>
+                <label htmlFor="username" className='text-white'>Username</label>
                 <input
                     id="username"
                     type="text"
@@ -89,8 +89,8 @@ export default function Account({ session }) {
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>
-            <div>
-                <label htmlFor="website">Website</label>
+            <div className='w-[10rem]'>
+                <label htmlFor="website" className='text-white'>Website</label>
                 <input
                     id="website"
                     type="website"
@@ -99,7 +99,7 @@ export default function Account({ session }) {
                 />
             </div>
 
-            <div className={`my-[10px]`}>
+            <div className={`my-[10px] w-[10rem]`}>
                 <button
                     className="button primary block"
                     onClick={() => updateProfile({ username, website, avatar_url })}
@@ -109,9 +109,9 @@ export default function Account({ session }) {
                 </button>
             </div>
 
-            <div>
+            <div className='w-[10rem]'>
                 <button
-                    className="button block"
+                    className="button block w-[2.5rem]"
                     onClick={() => supabase.auth.signOut()}
                 >
                     Sign Out
