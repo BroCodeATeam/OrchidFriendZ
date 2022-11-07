@@ -11,27 +11,27 @@ function Topnav() {
 
     return (
         <div>
-            <nav className='w-[96vw] h-auto z-10'>
+            <nav className='w-[96vw] h-40 z-10'>
                 <div className="w-fit h-auto">
                     <div className="w-screen flex items justify-between items-center px-[2.5rem]">
                         <div className="flex items-center h-auto w-36 h-36">
-                            <Image src={Logo} className={`w-fit`} />
+                            <Image src={Logo} className={`w-fit`} alt='' />
                         </div>
 
                         <div className="flex items-center ">
                             {/* small screen hidden med screen show in block */}
                             <div className="hidden md:block">
                                 <div className="flex items-baseline space-x-4">
-                                    <Link activeClass='Home' href='/' smooth={true} offset={50} duration={500} className="cursor-pointer text-primaryPurple font-semibold px-6 py-2 text-xl hover:font-black hover:bg-white text-primaryPurple hover:text-primaryPurple rounded-md font-semibold">
+                                    <Link activeClass='Home' to='/' smooth={true} offset={50} duration={500} className="cursor-pointer text-primaryPurple font-semibold px-6 py-2 text-xl hover:font-black hover:bg-white text-primaryPurple hover:text-primaryPurple rounded-md font-semibold">
                                         Home
                                     </Link>
-                                    <Link activeClass='gallery' href='./pages/Gallery' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-primaryPurple text-white hover:text-white rounded-md font-semibold px-6 py-2 text-xl hover:font-black">
+                                    <Link activeClass='gallery' to='./pages/Gallery' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-primaryPurple text-white hover:text-white rounded-md font-semibold px-6 py-2 text-xl hover:font-black">
                                         Gallery
                                     </Link>
-                                    <Link activeClass='resources' href='/resources' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-primaryPurple text-white hover:text-white rounded-md font-semibold px-6 py-2 text-xl hover:font-black">
+                                    <Link activeClass='resources' to='/resources' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-primaryPurple text-white hover:text-white rounded-md font-semibold px-6 py-2 text-xl hover:font-black">
                                         Resources
                                     </Link>
-                                    <Link activeClass='upload' href='/upload' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-darkBlue bg-primaryPurple text-white rounded-md font-semibold px-6 py-2 text-xl ">
+                                    <Link activeClass='upload' to='/upload' smooth={true} offset={50} duration={500} className="cursor-pointer hover:bg-darkBlue bg-primaryPurple text-white rounded-md font-semibold px-6 py-2 text-xl ">
                                         Upload
                                     </Link>
                                 </div>
