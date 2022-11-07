@@ -8,7 +8,7 @@ const LandingPage = () => {
     const supabase = useSupabaseClient()
 
     return (
-        <div>
+        <div className={`w-screen h-screen flex justify-center items-center`}>
             {!session ? (
                 <Auth
                     providers={
@@ -20,6 +20,7 @@ const LandingPage = () => {
                     supabaseClient={supabase}
                     appearance={{ theme: ThemeSupa }}
                     theme="dark"
+                    className={`w-[500px] max-w-[500px]`}
                 />
             ) : (
                 <Home />

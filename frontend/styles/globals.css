@@ -173,10 +173,17 @@ label {
     color: var(--custom-color);
     font-size: 0.8rem;
     text-transform: uppercase;
+    max-width: 500px;
+    width: 500px;
+}
+
+.c-bpexlo {
+    color: var(--custom-color) !important;
 }
 
 input {
-    width: 100%;
+    max-width: 500px;
+    width: 500px;
     border-radius: 5px;
     border: var(--custom-border);
     padding: 8px;
@@ -204,12 +211,37 @@ button,
     text-align: center;
     font-size: 0.9rem;
     text-transform: uppercase;
+    max-width: 15rem;
+    width: 15rem;
+}
+
+button:hover,
+.button:hover {
+    color: var(--custom-color);
+    border: var(--custom-border);
+    background: linear-gradient(65deg, var(--custom-color-secondary), var(--custom-color-brand));
+    display: inline-block;
+    text-align: center;
+    border-radius: var(--custom-border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    max-width: 15rem;
+    width: 15rem;
 }
 
 button.primary,
 .button.primary {
     background: linear-gradient(100deg, var(--custom-color-secondary), var(--custom-color-brand));
     border: 1px solid var(--custom-color-brand);
+}
+
+button.primary:hover,
+.button.primary:hover {
+    background: linear-gradient(100deg, var(--custom-color-brand), var(--custom-color-secondary));
+    border: 1px solid var(--custom-color-secondary);
 }
 
 /* Widgets */
@@ -302,10 +334,23 @@ button.primary,
 
 /* Auth */
 
+.t-dOnDMp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .auth-widget {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 500px;
+    width: 500px;
 }
 
 .auth-widget > .button {
@@ -327,6 +372,18 @@ button.primary,
     width: 17px;
     animation: spin 1s linear infinite;
     filter: invert(1);
+}
+.supabase-ui-auth_ui-divider {
+    max-width: 500px;
+    width: 500px;
+}
+
+.supabase-ui-auth_ui-anchor {
+    color: var(--custom-color) !important;
+}
+
+.supabase-ui-auth_ui-anchor:hover {
+    color: var(--custom-color-secondary) !important;
 }
 
 /* Account */
