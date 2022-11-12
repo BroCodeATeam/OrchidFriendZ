@@ -26,7 +26,7 @@ position: fixed;
   color: #603A89;
 }
 
-#navbar-items {
+.navbar-items {
   font-size: 2rem;
   display: inline-block;
   cursor: pointer;
