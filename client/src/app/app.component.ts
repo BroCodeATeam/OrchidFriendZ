@@ -35,10 +35,8 @@ export class AppComponent {
              )
             },
             whenSignedInAndEmailVerified: user => {
-              alert("")
             },
             whenChanged: user => {
-              alert("")
             }
           }
         )
