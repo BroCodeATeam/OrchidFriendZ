@@ -1,0 +1,28 @@
+#authenticator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Zen Antique', serif;
+}
+
+#authenticator-content {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.5rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #603A89;
+  box-sizing: border-box;
+}
