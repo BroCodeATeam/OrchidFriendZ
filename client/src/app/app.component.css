@@ -1,0 +1,33 @@
+#navbar {
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  z-index: 10;
+}
+
+#navbar-content {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+#navbar-left, #navbar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+#navbar-right {
+  justify-content: flex-end;
+  color: #603A89;
+}
+
+#navbar-items {
+  font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
