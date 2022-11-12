@@ -12,13 +12,15 @@ import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
 
 import { environment } from 'src/environments/environment'
 import { HomeComponent } from './pages/home/home.component';
-import { AuthenticatorComponent } from './tools/authenticator/authenticator.component'
+import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
+import { EmailVerificationComponent } from './pages/email-verification/email-verification.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthenticatorComponent
+    AuthenticatorComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
