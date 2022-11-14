@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth'
+import { FirebaseTSFirestore } from 'firebasets/firebasetsFirestore/firebaseTSFirestore';
 
 import { MatBottomSheet } from '@angular/material/bottom-sheet'
 import {AuthenticatorComponent} from "./tools/authenticator/authenticator.component";
@@ -13,7 +14,11 @@ import {AuthenticatorComponent} from "./tools/authenticator/authenticator.compon
 export class AppComponent {
   title = 'client';
   auth = new FirebaseTSAuth()
+  firestore = new FirebaseTSFirestore()
   isLoggedIn = false
+
+  userHasProfile = true;
+  userDocument: UserDocument | any
 
   constructor(
     private loginSheet: MatBottomSheet,
@@ -35,6 +40,7 @@ export class AppComponent {
              )
             },
             whenSignedInAndEmailVerified: user => {
+              this.getUserProfile()
             },
             whenChanged: user => {
             }
@@ -55,4 +61,28 @@ export class AppComponent {
   onLogoutClick(){
     this.auth.signOut()
   }
+
+  getUserProfile(){
+    this.firestore.listenToDocument({
+      name: "Getting Document",
+      path: [
+        "Users", this.auth?.getAuth()?.currentUser?.uid || '{}'
+      ],
+      onUpdate: (result) => {
+        this.userDocument = <UserDocument>result.data()
+        this.userHasProfile = result.exists
+        if(this.userHasProfile){
+          this.router.navigate(
+            [
+              "postFeed"
+            ]
+          )
+        }
+      }
+    })
+  }
+}
+
+export interface UserDocument {
+  publicName: string
 }

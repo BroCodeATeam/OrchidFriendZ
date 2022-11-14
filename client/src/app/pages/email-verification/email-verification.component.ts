@@ -16,7 +16,7 @@ export class EmailVerificationComponent implements OnInit {
   ngOnInit(): void {
     if(
       this.auth.isSignedIn() &&
-      !this.auth?.getAuth()?.currentUser?.emailVerified
+      !this.auth.isEmailVerified()
     ){
       this.auth.sendVerificationEmail()
     } else {

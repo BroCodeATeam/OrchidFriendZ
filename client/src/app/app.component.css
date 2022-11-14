@@ -30,4 +30,9 @@ position: fixed;
   font-size: 2rem;
   display: inline-block;
   cursor: pointer;
+  margin: 0 1rem;
+}
+
+#active-profile-name {
+  color: #12899C;
 }

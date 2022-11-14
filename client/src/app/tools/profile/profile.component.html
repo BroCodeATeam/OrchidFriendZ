@@ -1,1 +1,19 @@
-<p>profile works!</p>
+<div id="profile" [ngClass]="{'active' : show, 'idle' : !show}" >
+  <div id="profile-content">
+    <form>
+<!--      <mat-form-field appearance="fill">-->
+        <input #firstNameInput placeholder="First Name" type="text" />
+        <input #lastNameInput placeholder="Last Name" type="text" />
+<!--        <input type="text" [matAutocomplete]="auto" [formControl]="myControl" matInput />-->
+<!--        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="SelectedSociety($event.societies.value)">-->
+<!--          <mat-option *ngFor="let society of societies" [value]="societies.society_name">-->
+<!--            {{societies.society_name}} | {{societies.society_name}}-->
+<!--          </mat-option>-->
+<!--        </mat-autocomplete>-->
+
+        <button mat-raised-button color="accent" (click)="onContinueClick(firstNameInput, lastNameInput)" >Continue</button>
+
+<!--      </mat-form-field>-->
+    </form>
+  </div>
+</div>
