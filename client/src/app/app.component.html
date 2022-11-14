@@ -5,8 +5,11 @@
     </div>
     <div id="navbar-right">
       <div *ngIf="!loggedIn()" class="navbar-items" (click)="onLoginClick()">Login</div>
+      <div *ngIf="loggedIn() && userHasProfile" class="navbar-items">Hello, <span id="active-profile-name">{{userDocument?.publicName}}</span></div>
       <div *ngIf="loggedIn()" class="navbar-items" (click)="onLogoutClick()">Logout</div>
     </div>
   </div>
 </div>
+
 <router-outlet></router-outlet>
+<app-profile [show]="loggedIn() && !userHasProfile"></app-profile>
