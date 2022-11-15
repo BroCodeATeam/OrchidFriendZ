@@ -4,9 +4,11 @@
 
     </div>
     <div class="flex items-center h-full px-2 py-0 box-border justify-end text-primaryPurple" id="navbar-right">
-      <div class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 my-0">Login</div>
-      <div class="navbar-item text-[2rem] inline-block cursor-pointer mx-4 my-0">Hello, <span class="active-profile-name text-darkBlue">Philip R, McDavid</span></div>
-      <div class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 mr-5 my-0">Logout</div>
+      <div *ngIf="!loggedIn()" class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 my-0">Login</div>
+      <div *ngIf="authService.userData as user">
+        <div class="navbar-item text-[2rem] inline-block cursor-pointer mx-2 my-0">Hello, <em class="active-profile-name text-darkBlue">{{user.displayName}}</em></div>
+      </div>
+      <div *ngIf="loggedIn()" class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 mr-2 my-0" (click)="authService.SignOut()">Logout</div>
     </div>
   </div>
 </div>
