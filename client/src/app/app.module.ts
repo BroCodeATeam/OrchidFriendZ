@@ -13,7 +13,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import {MatInputModule} from '@angular/material/input'
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp'
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app'
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 
 import { environment } from 'src/environments/environment'
 import { HomeComponent } from './pages/home/home.component';
@@ -42,16 +45,13 @@ import { PostFeedComponent } from './pages/post-feed/post-feed.component';
     MatFormFieldModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 
-export class AppModule {
-  constructor(){
-    FirebaseTSApp.init(
-      environment.firebaseConfig
-    );
-  }
-}
+export class AppModule { }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {
+  firebase: {
     apiKey: "AIzaSyAiVaJNWy7Su6akZlv6ajKTRLOwkuv71QA",
     authDomain: "orchid-friendz.firebaseapp.com",
     projectId: "orchid-friendz",
