@@ -34,8 +34,8 @@
     </div>
 
     <div *ngIf="isForgotPasswordState()">
-      <input class="w-full p-1 no-outline box-border border-2 rounded-sm border-primaryPurple p-1 my-1" placeholder="Email Address" />
-      <button class="text-[1rem] py-[.5rem] px-[1rem] font-serif" mat-raised-button color="warn">Reset</button>
+      <input class="w-full p-1 no-outline box-border border-2 rounded-sm border-primaryPurple p-1 my-1" placeholder="Email Address" #passwordResetEmail required />
+      <button class="text-[1rem] py-[.5rem] px-[1rem] font-serif" mat-raised-button color="warn" (click)="authService.ForgotPassword(passwordResetEmail.value)">Reset</button>
     </div>
 
     <mat-card-actions align="end">
