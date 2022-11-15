@@ -7,10 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         serif: [
-          'Zen Antique', serif
+          'Zen Antique', 'serif'
         ],
         cursive: [
-          'Quintessential', cursive
+          'Quintessential', 'cursive'
         ]
       },
       colors: {
@@ -35,6 +35,9 @@ module.exports = {
         purpleOverlay: "rgba(128, 0, 128, 0.6)",
         violetOverlay: "rgba(127, 0, 255, 0.6)",
         cattOverlay: "rgba(255, 255, 253, 0.5)",
+      },
+      backgroundImages: {
+        'home-image': "url('assets/accent4.png')",
       },
     keyframes: {
       "slide-in": {

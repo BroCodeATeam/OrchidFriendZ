@@ -3,15 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
   firebase: {
-    apiKey: "AIzaSyAiVaJNWy7Su6akZlv6ajKTRLOwkuv71QA",
-    authDomain: "orchid-friendz.firebaseapp.com",
-    projectId: "orchid-friendz",
-    storageBucket: "orchid-friendz.appspot.com",
-    messagingSenderId: "26908607034",
-    appId: "1:26908607034:web:ec16a279e988373b63ab03"
+    projectId: 'orchid-friendz',
+    appId: '1:26908607034:web:ec16a279e988373b63ab03',
+    storageBucket: 'orchid-friendz.appspot.com',
+    apiKey: 'AIzaSyAiVaJNWy7Su6akZlv6ajKTRLOwkuv71QA',
+    authDomain: 'orchid-friendz.firebaseapp.com',
+    messagingSenderId: '26908607034',
   },
+  production: false
 };
 
 /*

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatBottomSheetRef } from '@angular/material/bottom-sheet'
 
-import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth'
+// Auth Service
+import {AuthService} from "../../shared/services/auth";
 
 @Component({
   selector: 'app-authenticator',
@@ -10,93 +10,11 @@ import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth'
 })
 export class AuthenticatorComponent implements OnInit {
   state = AuthenticatorCompState.LOGIN
-  firebasetsAuth: FirebaseTSAuth
   constructor(
-    private bottomSheetRef: MatBottomSheetRef
-  ) {
-    this.firebasetsAuth = new FirebaseTSAuth()
-  }
+    public authService: AuthService
+  ) { }
 
   ngOnInit(): void {
-  }
-
-  onRegisterClick(
-    registerEmail: HTMLInputElement,
-    registerPassword: HTMLInputElement,
-    registerConfirmPassword: HTMLInputElement
-  ){
-    let email = registerEmail.value
-    let password = registerPassword.value
-    let confirmPassword = registerPassword.value
-
-    if(
-      this.isNotEmpty(email) &&
-      this.isNotEmpty(password) &&
-      this.isNotEmpty(confirmPassword) &&
-      this.isAMatch(password, confirmPassword)
-    ) {
-      this.firebasetsAuth.createAccountWith(
-        {
-          email: email,
-          password: password,
-          onComplete: (uc) => {
-            this.bottomSheetRef.dismiss()
-          },
-          onFail: (err) => {
-            alert("Failed to create the account")
-          }
-        }
-      )
-    }
-  }
-
-  onLogin(
-    loginEmail: HTMLInputElement,
-    loginPassword: HTMLInputElement
-  ){
-    let email = loginEmail.value
-    let password = loginPassword.value
-
-    if(
-      this.isNotEmpty(email) &&
-      this.isNotEmpty(password)
-    ) {
-      this.firebasetsAuth.signInWith(
-        {
-          email: email,
-          password: password,
-          onComplete: (uc) => {
-            this.bottomSheetRef.dismiss()
-          },
-          onFail: (err) => {
-            alert(err)
-          }
-        }
-      )
-    }
-  }
-
-  onResetClick(resetEmail: HTMLInputElement){
-    let email = resetEmail.value
-
-    if(this.isNotEmpty(email)){
-      this.firebasetsAuth.sendPasswordResetEmail(
-        {
-          email: email,
-          onComplete: (uc) => {
-            this.bottomSheetRef.dismiss()
-          }
-        }
-      )
-    }
-  }
-
-  isNotEmpty(text: string) {
-    return text != null && text.length >0
-  }
-
-  isAMatch(text: string, comparedWith: string) {
-    return text == comparedWith
   }
 
   onForgotPasswordClick(){
@@ -125,11 +43,11 @@ export class AuthenticatorComponent implements OnInit {
 
   getStateText(){
     switch(this.state){
-      case AuthenticatorCompState.LOGIN:
+      case AuthenticatorCompState.LOGIN :
         return "Login"
-      case AuthenticatorCompState.REGISTER:
-        return "Register"
-      case AuthenticatorCompState.FORGOT_PASSWORD:
+      case AuthenticatorCompState.REGISTER :
+        return "Create Account"
+      case AuthenticatorCompState.FORGOT_PASSWORD :
         return "Reset Password"
     }
   }

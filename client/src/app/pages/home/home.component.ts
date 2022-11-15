@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 
+// Material Imports
 import { MatBottomSheet } from '@angular/material/bottom-sheet'
-import {AuthenticatorComponent} from '../../tools/authenticator/authenticator.component'
+
+// component imports
+import {AuthenticatorComponent} from "../../tools/authenticator/authenticator.component";
 
 @Component({
   selector: 'app-home',

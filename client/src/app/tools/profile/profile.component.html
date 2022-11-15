@@ -1,19 +1,19 @@
-<div id="profile" [ngClass]="{'active' : show, 'idle' : !show}" >
-  <div id="profile-content">
+<div class="fixed top-0 right-0 h-screen bg-blackOverlay z-9 transition-all duration-500 overflow-hidden flex justify-center items-center" id="profile" >
+  <div class="w-full max-w-[500px] p-4 box-border" id="profile-content">
     <form>
-<!--      <mat-form-field appearance="fill">-->
-        <input #firstNameInput placeholder="First Name" type="text" />
-        <input #lastNameInput placeholder="Last Name" type="text" />
-<!--        <input type="text" [matAutocomplete]="auto" [formControl]="myControl" matInput />-->
-<!--        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="SelectedSociety($event.societies.value)">-->
-<!--          <mat-option *ngFor="let society of societies" [value]="societies.society_name">-->
-<!--            {{societies.society_name}} | {{societies.society_name}}-->
-<!--          </mat-option>-->
-<!--        </mat-autocomplete>-->
+      <!--      <mat-form-field appearance="fill">-->
+      <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple" placeholder="First Name" type="text" />
+      <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple" placeholder="Last Name" type="text" />
+      <!--        <input type="text" [matAutocomplete]="auto" [formControl]="myControl" matInput />-->
+      <!--        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="SelectedSociety($event.societies.value)">-->
+      <!--          <mat-option *ngFor="let society of societies" [value]="societies.society_name">-->
+      <!--            {{societies.society_name}} | {{societies.society_name}}-->
+      <!--          </mat-option>-->
+      <!--        </mat-autocomplete>-->
 
-        <button mat-raised-button color="accent" (click)="onContinueClick(firstNameInput, lastNameInput)" >Continue</button>
+      <button mat-raised-button color="accent" >Continue</button>
 
-<!--      </mat-form-field>-->
+      <!--      </mat-form-field>-->
     </form>
   </div>
 </div>

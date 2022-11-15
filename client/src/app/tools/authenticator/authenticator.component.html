@@ -1,27 +1,68 @@
-<div id="authenticator">
-  <mat-card id="authenticator-content">
+<div class="flex justify-center items-center p-[1rem] box-border bg-violetOverlay" id="authenticator">
+  <mat-card class="w-full max-w-[30rem] p-[1.5rem] bg-tealOverlay" id="authenticator-content">
     <mat-card-header>
-      <mat-card-title>{{getStateText()}}</mat-card-title>
+      <mat-card-title class="text-[5rem] font-serif">{{getStateText()}}</mat-card-title>
     </mat-card-header>
+
     <div *ngIf="isLoginState()">
-      <input #loginEmail placeholder="Email Address" />
-      <input #loginPassword placeholder="Password" type="password" />
-      <button (click)="onLogin(loginEmail, loginPassword)" mat-raised-button color="primary">Login</button>
+      <div>
+        <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple my-1" placeholder="Email Address" #loginEmail required />
+        <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple my-1" placeholder="Password" type="password" #loginPassword required />
+        <button class="text-[1rem] py-[.5rem] px-[1rem] my-2 font-serif" mat-raised-button color="primary" (click)="authService.SignIn(loginEmail.value, loginPassword.value)">Login</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <button (click)="authService.GoogleAuth()" class="flex flex-row rounded-md bg-gray-500 p-2 my-2 font-serif">
+          <img src="../assets/icons/google.svg" alt="" class="w-5 h-5" />
+          <p class="ml-2 font-serif">Login With Google</p>
+        </button>
+      </div>
     </div>
+
     <div *ngIf="isRegisterState()">
-      <input #registerEmail placeholder="Email Address" />
-      <input #registerPassword placeholder="Password" type="password" />
-      <input #registerConfirmPassword placeholder="Confirm Password" type="password" />
-      <button (click)="onRegisterClick(registerEmail, registerPassword, registerConfirmPassword)" mat-raised-button color="primary">Create Account</button>
+      <div>
+        <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple my-1" placeholder="Email Address" #registerEmail required />
+        <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple my-1" placeholder="Password" type="password" #registerPassword required />
+        <input class="w-full p-1 no-outline box-border border-2 rounded-md border-primaryPurple my-1" placeholder="Confirm Password" type="password" #registerConfirmPassword required />
+        <button class="text-[1rem] py-[.5rem] px-[1rem] my-2 font-serif" mat-raised-button color="accent" (click)="authService.SignUp(registerEmail.value, registerPassword.value, registerConfirmPassword.value)">Create Account</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <button (click)="authService.GoogleAuth()" class="flex flex-row rounded-md bg-gray-500 p-2 my-2 font-serif">
+          <img src="../assets/icons/google.svg" alt="" class="w-5 h-5" />
+          <p class="ml-2 font-serif">Login With Google</p>
+        </button>
+      </div>
     </div>
+
     <div *ngIf="isForgotPasswordState()">
-      <input #resetEmail placeholder="Email Address" />
-      <button (click)="onResetClick(resetEmail)" mat-raised-button color="warn">Reset</button>
+      <input class="w-full p-1 no-outline box-border border-2 rounded-sm border-primaryPurple p-1 my-1" placeholder="Email Address" />
+      <button class="text-[1rem] py-[.5rem] px-[1rem] font-serif" mat-raised-button color="warn">Reset</button>
     </div>
+
     <mat-card-actions align="end">
-      <button (click)="onForgotPasswordClick()" mat-raised-button color="warn">Forgot Password?</button>
-      <button (click)="onCreateAccountClick()" mat-raised-button color="accent">Create an Account</button>
-      <button (click)="onLoginClick()" mat-raised-button color="primary">Login</button>
+      <button
+        (click)="onForgotPasswordClick()"
+        class="text-[1rem] py-[.5rem] px-[1rem] font-serif"
+        mat-raised-button
+        color="warn"
+      >
+        Forgot Password?
+      </button>
+      <button
+        (click)="onCreateAccountClick()"
+        class="text-[1rem] py-[.5rem] px-[1rem] font-serif"
+        mat-raised-button
+        color="accent"
+      >
+        Create Account
+      </button>
+      <button
+        (click)="onLoginClick()"
+        class="text-[1rem] py-[.5rem] px-[1rem] font-serif"
+        mat-raised-button
+        color="primary"
+      >Login
+      </button>
     </mat-card-actions>
+
   </mat-card>
 </div>
