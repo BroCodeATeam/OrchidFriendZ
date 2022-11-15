@@ -37,13 +37,15 @@ import {FormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
 import { ProfileComponent } from './tools/profile/profile.component';
+import { EmailVerificationComponent } from './pages/email-verification/email-verification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AuthenticatorComponent,
-    ProfileComponent
+    ProfileComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
