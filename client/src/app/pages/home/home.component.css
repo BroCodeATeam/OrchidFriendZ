@@ -16,30 +16,3 @@
   align-items: center;
   margin-left: 15rem;
 }
-
-#landing-left {
-  background: rgba(13, 137, 156,0.85);
-  border-radius: 2.5rem;
-  border: 2px solid #603A89;
-}
-
-#landing-left_content {
-  text-align: center;
-  padding: 1rem 1rem 1rem 3rem;
-  margin: 2rem;
-}
-
-#landing-left_content img {
-  width: 25rem;
-  height: auto;
-}
-
-#landing-left_content h4 {
-  font-size: 2rem;
-  font-family: 'Quintessential', cursive;
-}
-
-#landing-left_content button {
-  font-size: 1rem;
-  padding: .5rem 1rem;
-}
