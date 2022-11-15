@@ -4,7 +4,7 @@
 
     </div>
     <div class="flex items-center h-full px-2 py-0 box-border justify-end text-primaryPurple" id="navbar-right">
-      <div *ngIf="!loggedIn()" class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 my-0">Login</div>
+      <div *ngIf="!loggedIn()" (click)="onLoginClick()" class="navbar-item text-[2rem] inline-block cursor-pointer mx-1 my-0">Login</div>
       <div *ngIf="authService.userData as user">
         <div class="navbar-item text-[2rem] inline-block cursor-pointer mx-2 my-0">Hello, <em class="active-profile-name text-darkBlue">{{user.displayName}}</em></div>
       </div>

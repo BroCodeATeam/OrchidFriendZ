@@ -30,7 +30,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 
 // Material imports
 import {MatButtonModule} from "@angular/material/button";
-import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
+import {MatBottomSheetModule, MatBottomSheetRef} from "@angular/material/bottom-sheet";
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
@@ -74,7 +74,7 @@ import { EmailVerificationComponent } from './pages/email-verification/email-ver
     FormsModule,
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService, AuthService
+    ScreenTrackingService,UserTrackingService, AuthService,
   ],
   bootstrap: [AppComponent]
 })

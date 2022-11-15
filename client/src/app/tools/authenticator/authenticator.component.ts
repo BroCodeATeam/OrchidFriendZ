@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // Auth Service
 import {AuthService} from "../../shared/services/auth";
+import {MatBottomSheetRef} from "@angular/material/bottom-sheet";
 
 @Component({
   selector: 'app-authenticator',
@@ -11,7 +12,8 @@ import {AuthService} from "../../shared/services/auth";
 export class AuthenticatorComponent implements OnInit {
   state = AuthenticatorCompState.LOGIN
   constructor(
-    public authService: AuthService
+    public authService: AuthService,
+    public bottomSheetRef: MatBottomSheetRef
   ) { }
 
   ngOnInit(): void {
