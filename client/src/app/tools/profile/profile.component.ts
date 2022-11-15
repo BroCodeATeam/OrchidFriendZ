@@ -10,7 +10,7 @@ import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 })
 
 export class ProfileComponent implements OnInit {
-  @Input() show: boolean | undefined
+  @Input() show!: boolean
 
   firestore: FirebaseTSFirestore
   auth: FirebaseTSAuth
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
         lastNameInput.value = ""
       },
       onFail: (err) => {
-
+        alert(err)
       }
       })
   }
