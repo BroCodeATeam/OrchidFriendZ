@@ -14,16 +14,18 @@ export class AppComponent {
   title = 'client';
 
   constructor(
-    private loginSheet: MatBottomSheet,
+    public loginSheet: MatBottomSheet,
     public authService: AuthService
   ){}
 
   onLoginClick(){
     this.loginSheet.open(AuthenticatorComponent)
+    this.loginSheet.dismiss(AuthenticatorComponent)
   }
 
   loggedIn(){
     return this.authService.isLoggedIn
+    this.loginSheet.dismiss(AuthenticatorComponent)
   }
 
 }

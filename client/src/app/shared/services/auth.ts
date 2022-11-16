@@ -7,6 +7,8 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { MatBottomSheet } from '@angular/material/bottom-sheet'
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,6 +19,7 @@ export class AuthService {
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
     public ngZone: NgZone, // NgZone service to remove outside scope warning
+    public loginSheet: MatBottomSheet,
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
@@ -40,6 +43,7 @@ export class AuthService {
         this.afAuth.authState.subscribe((user) => {
           if (user) {
             this.router.navigate(['postFeed']);
+            this.loginSheet.dismiss()
           }
         });
       })
@@ -56,6 +60,7 @@ export class AuthService {
         up and returns promise */
         this.SendVerificationMail();
         this.SetUserData(result.user);
+        this.loginSheet.dismiss()
       })
       .catch((error) => {
         window.alert(error.message);
@@ -67,6 +72,7 @@ export class AuthService {
       .then((u: any) => u.sendEmailVerification())
       .then(() => {
         this.router.navigate(['email-verification']);
+        this.loginSheet.dismiss()
       });
   }
   // Reset Forgot password
@@ -89,6 +95,7 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       this.router.navigate(['postFeed']);
+      this.loginSheet.dismiss()
     });
   }
   // Auth logic to run auth providers
@@ -98,6 +105,7 @@ export class AuthService {
       .then((result) => {
         this.router.navigate(['postFeed']);
         this.SetUserData(result.user);
+        this.loginSheet.dismiss()
       })
       .catch((error) => {
         window.alert(error);
