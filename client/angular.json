@@ -23,7 +23,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,26 +90,12 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "client:build:production",
-            "firebaseProject": "orchid-friendz",
-            "firebaseHostingSite": "orchid-friendz"
-          }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "61ed8784-28f9-4d29-92cf-bae699a83cbd"
   }
 }
