@@ -24,9 +24,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(13, 137, 156,0.85);
+  background:
+    rgba(0, 128, 128, 0.5);
   border-radius: 2.5rem;
   border: 2px solid #603A89;
+  box-shadow: 0px 2px 7px #603A89;
 }
 
 #landing-left_content {
@@ -43,6 +45,7 @@
 #landing-left_content h4 {
   font-size: 2rem;
   font-family: 'Quintessential', cursive;
+  text-shadow: 2px 2px 1px black;
 }
 
 #landing-left_content button {
@@ -54,11 +57,11 @@
   width: 35rem;
   height: 35rem;
   background:
-    rgba(13, 137, 156,0.85)
-    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+    rgba(0, 128, 128, 0.3);
   background-size: cover;
   border-radius: 2.5rem;
-  box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+  border: 2px solid var(--primary-purple);
+  box-shadow: 0px 2px 7px #008080;
   overflow: hidden;
   transition: all .5s ease;
   display: flex;
@@ -74,10 +77,15 @@ a:hover {
   text-decoration: none;
 }
 .link {
-  color: #c4c3ca;
+  color: var(--custom-color);
 }
 .link:hover {
-  color: #ffeba7;
+  color: var(--primary-violet);
+}
+.forgotPassword_link {
+  margin-top: 2rem;
+  text-align: end;
+  margin-right: 1rem;
 }
 p {
   font-weight: 500;
@@ -88,7 +96,8 @@ h4 {
   font-weight: 600;
 }
 h6 {
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
 }
 h6 span{
   padding: 0 20px;
@@ -118,7 +127,7 @@ h6 span{
   height: 16px;
   border-radius: 8px;
   padding: 0;
-  margin: 10px auto;
+  margin: 0 auto;
   cursor: pointer;
   background-color: var(--primary-purple);
 }
@@ -144,6 +153,12 @@ h6 span{
   transform: translateX(44px) rotate(-270deg);
 }
 
+.title-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
 
 .card-3d-wrap {
   position: relative;
@@ -168,13 +183,14 @@ h6 span{
 .card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-color: var(--purple-overlay);
+  background-color: var(--teal-overlay);
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 300%;
   position: absolute;
-  border-radius: 6px;
+  border-radius: 1rem;
+  border: 2px solid var(--primary-purple);
   left: 0;
   top: 0;
   -webkit-transform-style: preserve-3d;
@@ -313,9 +329,9 @@ h6 span{
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: var(--primary-teal);
+  background-color: var(--primary-purple);
   color: var(--custom-color);
-  box-shadow: 0 8px 24px 0 rgba(0, 255, 255, 0.25);
+  box-shadow: 0 8px 24px 0 rgba(128, 0, 128, 0.3);
 }
 .btn:active,
 .btn:focus{
