@@ -40,6 +40,7 @@
 #landing-left_content img {
   width: 25rem;
   height: auto;
+  padding: 0 0 3rem 2rem;
 }
 
 #landing-left_content h4 {
@@ -222,10 +223,10 @@ h6 span{
   position: relative;
   display: block;
   margin: 1rem 0;
-  padding: 0;
 }
 .form-style {
   padding: 13px 20px;
+  padding-left: 3rem;
   height: 48px;
   width: 95%;
   font-weight: 500;
@@ -250,12 +251,12 @@ h6 span{
 .input-icon {
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 10px;
   height: 48px;
   font-size: 24px;
   line-height: 48px;
   text-align: left;
-  color: #ffeba7;
+  color: var(--primary-teal);
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
